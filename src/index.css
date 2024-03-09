@@ -32,13 +32,13 @@
 
   /* spacing library */
   --space-unit: 0.8rem;
-  --space-xs: var(--space-unit) * 0.5;
-  --space-sm: var(--space-unit) * 2;
-  --space-md: var(--space-unit) * 4;
-  --space-lg: var(--space-unit) * 8;
-  --space-xl: var(--space-unit) * 10;
-  --space-xxl: var(--space-unit) * 15;
-  --space-xxxl: var(--space-unit) * 20;
+  --space-xs: calc(var(--space-unit) * 0.5);
+  --space-sm: calc(var(--space-unit) * 2);
+  --space-md: calc(var(--space-unit) * 4);
+  --space-lg: calc(var(--space-unit) * 8);
+  --space-xl: calc(var(--space-unit) * 10);
+  --space-xxl: calc(var(--space-unit) * 15);
+  --space-xxxl: calc(var(--space-unit) * 20);
 }
 
 /* -------------------------------------------------------------- Reset some style */
