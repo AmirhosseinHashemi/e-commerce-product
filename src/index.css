@@ -8,13 +8,13 @@
   --fw-bold: 700;
 
   --fs-unit: 0.8rem;
-  --fs-xs: var(--fs-unit) * 0.5;
-  --fs-sm: var(--fs-unit) * 1.5;
-  --fs-md: var(--fs-unit) * 2;
-  --fs-lg: var(--fs-unit) * 3;
-  --fs-xl: var(--fs-unit) * 4;
-  --fs-xxl: var(--fs-unit) * 5;
-  --fs-xxxl: var(--fs-unit) * 7;
+  --fs-xs: calc(var(--fs-unit) * 0.5);
+  --fs-sm: calc(var(--fs-unit) * 1.5);
+  --fs-md: calc(var(--fs-unit) * 2);
+  --fs-lg: calc(var(--fs-unit) * 3);
+  --fs-xl: calc(var(--fs-unit) * 4);
+  --fs-xxl: calc(var(--fs-unit) * 5);
+  --fs-xxxl: calc(var(--fs-unit) * 7);
 
   /* Colors library */
   --color-primary-orange: hsl(26, 100%, 55%);
@@ -60,6 +60,7 @@ html {
 /* -------------------------------------------------------------- General */
 
 body {
+  position: relative;
   font-family: var(--ff-kumbh);
 }
 

@@ -1,5 +1,6 @@
 import styles from "./Header.module.css";
 import AvatarImg from "../../assets/images/image-avatar.png";
+// import Navigation from "../Navigation/Navigation";
 
 function Header() {
   return (
@@ -8,6 +9,7 @@ function Header() {
       <Logo />
       <CartButton />
       <AvatarButton />
+      {/* <Navigation /> */}
     </header>
   );
 }

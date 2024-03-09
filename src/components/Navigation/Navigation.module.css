@@ -1,0 +1,19 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 30%;
+  height: 100vh;
+  padding: var(--space-xxl) 0 0 var(--space-md);
+  background-color: var(--color-neutral-white);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.navigation li a {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-gray-1);
+}
