@@ -1,15 +1,22 @@
+import { useState } from "react";
+import PropType from "prop-types";
+
 import styles from "./Header.module.css";
 import AvatarImg from "../../assets/images/image-avatar.png";
-// import Navigation from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
+import Overlay from "../Overlay/Overlay";
 
-function Header() {
+export default function Header() {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
   return (
     <header className={styles.header}>
-      <MenuButton />
+      <MenuButton isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <Logo />
       <CartButton />
       <AvatarButton />
-      {/* <Navigation /> */}
+      {isNavOpen && <Navigation />}
+      {isNavOpen && <Overlay />}
     </header>
   );
 }
@@ -26,16 +33,28 @@ function Logo() {
   );
 }
 
-function MenuButton() {
+function MenuButton({ isNavOpen, setIsNavOpen }) {
   return (
-    <button>
-      <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
-        <path
-          d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
-          fill="#69707D"
-          fillRule="evenodd"
-        />
-      </svg>
+    <button onClick={() => setIsNavOpen((val) => !val)}>
+      {isNavOpen ? (
+        // close icon
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z"
+            fill="#69707D"
+            fillRule="evenodd"
+          />
+        </svg>
+      ) : (
+        // hamburger icon
+        <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z"
+            fill="#69707D"
+            fillRule="evenodd"
+          />
+        </svg>
+      )}
     </button>
   );
 }
@@ -62,4 +81,8 @@ function AvatarButton() {
   );
 }
 
-export default Header;
+// checking prop types
+MenuButton.propTypes = {
+  isNavOpen: PropType.bool,
+  setIsNavOpen: PropType.func,
+};
