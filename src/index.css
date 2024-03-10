@@ -88,3 +88,10 @@ a:visited {
   background-color: var(--color-neutral-lightBox);
   z-index: 0;
 }
+
+/* -------------------------------------------------------------- Responsive */
+@media only screen and (min-width: 1439px) {
+  .overlay {
+    display: none;
+  }
+}

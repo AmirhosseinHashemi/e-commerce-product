@@ -4,19 +4,29 @@ function Navigation() {
   return (
     <ul className={styles.navigation}>
       <li>
-        <a href="#">Collection</a>
+        <a className={styles.link} href="#">
+          Collection
+        </a>
       </li>
       <li>
-        <a href="#">Men</a>
+        <a className={styles.link} href="#">
+          Men
+        </a>
       </li>
       <li>
-        <a href="#">Women</a>
+        <a className={styles.link} href="#">
+          Women
+        </a>
       </li>
       <li>
-        <a href="#">About</a>
+        <a className={styles.link} href="#">
+          About
+        </a>
       </li>
       <li>
-        <a href="#">Contact</a>
+        <a className={styles.link} href="#">
+          Contact
+        </a>
       </li>
     </ul>
   );
