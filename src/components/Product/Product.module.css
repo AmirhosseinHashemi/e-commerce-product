@@ -5,3 +5,14 @@
 
   margin: var(--space-md);
 }
+
+@media only screen and (min-width: 1439px) {
+  .product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .product > button {
+    grid-column: 2 / -1;
+  }
+}

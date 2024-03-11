@@ -32,3 +32,44 @@
   right: 0;
   transform: translate(-50%, -50%);
 }
+
+.thumbnails {
+  display: none;
+}
+
+@media only screen and (min-width: 1439px) {
+  .productCarousel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .productContainer {
+    height: 50rem;
+  }
+
+  .productContainer img {
+    cursor: pointer;
+    border-radius: 1.6rem;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .thumbnails {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-md);
+  }
+
+  .thumbnails button img {
+    border-radius: 1.2rem;
+  }
+
+  .thumbnails button:focus {
+    outline: 0.3rem solid var(--color-neutral-black);
+    border-radius: 1.2rem;
+    opacity: 0.5;
+  }
+}

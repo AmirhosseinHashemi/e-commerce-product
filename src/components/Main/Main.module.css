@@ -1,0 +1,13 @@
+@media only screen and (min-width: 1439px) {
+  .main {
+    display: flex;
+    align-items: center;
+    gap: var(--space-lg);
+    padding: var(--space-xl) var(--space-xxxl);
+  }
+
+  .main > div,
+  .main > section {
+    flex-basis: 50%;
+  }
+}

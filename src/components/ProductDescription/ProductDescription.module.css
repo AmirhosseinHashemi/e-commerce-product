@@ -1,5 +1,4 @@
 .product {
-  /* padding: var(--space-md); */
   padding-bottom: 0;
 }
 
@@ -71,4 +70,16 @@
 
   height: 0.1rem;
   background-color: var(--color-gray-3);
+}
+
+@media only screen and (min-width: 1439px) {
+  .product {
+    grid-column: 1 / -1;
+  }
+
+  .product h2 {
+    font-size: var(--fs-xxl);
+    line-height: 4.3rem;
+    margin: var(--space-md) 0;
+  }
 }
