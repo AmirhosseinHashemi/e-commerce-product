@@ -1,5 +1,6 @@
 .product {
   padding: var(--space-md);
+  padding-bottom: 0;
 }
 
 .productLabel {

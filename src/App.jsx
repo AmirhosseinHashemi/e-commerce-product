@@ -1,3 +1,4 @@
+import Counter from "./components/Counter/Counter";
 import Header from "./components/Header/Header";
 import Main from "./components/Main/Main";
 import ProductCarousel from "./components/ProductCarousel/ProductCarousel";
@@ -10,6 +11,7 @@ function App() {
       <Main>
         <ProductCarousel />
         <ProductDescription />
+        <Counter />
       </Main>
     </>
   );
