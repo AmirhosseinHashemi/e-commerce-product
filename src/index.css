@@ -99,11 +99,7 @@ a:visited {
   background-color: var(--color-primary-orange);
   border-radius: 0.8rem;
   box-shadow: 0 0.8rem 0.8rem 0 var(--color-primary-paleOrange);
-
-  /* temporary style */
-  width: 84%;
-  margin: 0 auto;
-  margin-bottom: var(--space-md);
+  width: 100%;
 }
 
 .btn svg path {

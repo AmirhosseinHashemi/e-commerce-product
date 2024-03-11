@@ -3,7 +3,7 @@ import styles from "./ProductDescription.module.css";
 // we can make this component reusable but in this project it's not neccessary
 function ProductDescription() {
   return (
-    <section className={styles.product}>
+    <div className={styles.product}>
       <span className={styles.productLabel}>SNEAKERS COMPANY</span>
       <h2>Fall Limited Edition Sneakers</h2>
       <p className={styles.productText}>
@@ -18,7 +18,7 @@ function ProductDescription() {
         </p>
         <p className={styles.productMainPrice}>$250.00</p>
       </div>
-    </section>
+    </div>
   );
 }
 

@@ -19,7 +19,7 @@ function ProductCarousel() {
   }
 
   return (
-    <section className={styles.productCarousel}>
+    <div className={styles.productCarousel}>
       <figure className={styles.productContainer}>
         <img src={images[activeImg]} alt="shoe" />
       </figure>
@@ -53,7 +53,7 @@ function ProductCarousel() {
           />
         </svg>
       </button>
-    </section>
+    </div>
   );
 }
 
