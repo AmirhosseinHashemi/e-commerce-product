@@ -1,9 +1,7 @@
-import { useState } from "react";
+import PropType from "prop-types";
 import styles from "./Counter.module.css";
 
-function Counter() {
-  const [num, setNum] = useState(0);
-
+function Counter({ num, setNum }) {
   function handleChangeNum(value) {
     if (value === "inc") setNum((preNum) => preNum + 1);
 
@@ -45,5 +43,10 @@ function Counter() {
     </div>
   );
 }
+
+Counter.propTypes = {
+  num: PropType.number,
+  setNum: PropType.func,
+};
 
 export default Counter;
