@@ -115,6 +115,11 @@ button:focus-visible {
   width: 100%;
 }
 
+.btn:active {
+  box-shadow: none;
+  opacity: 0.8;
+}
+
 .btn svg path {
   fill: var(--color-neutral-white);
 }
@@ -137,5 +142,10 @@ button:focus-visible {
 
   .wrapper {
     max-width: 144rem;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+    box-shadow: none;
   }
 }

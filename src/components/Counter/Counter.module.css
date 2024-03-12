@@ -18,3 +18,13 @@
   font-weight: var(--fw-bold);
   color: var(--color-gray-1);
 }
+
+.counter button:active svg {
+  opacity: 0.6;
+}
+
+@media only screen and (min-width: 1439px) {
+  .counter button:hover svg {
+    opacity: 0.8;
+  }
+}

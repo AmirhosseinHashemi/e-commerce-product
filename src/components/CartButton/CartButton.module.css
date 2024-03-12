@@ -18,9 +18,17 @@
   border-radius: 50%;
 }
 
+.cartBtn:focus svg path {
+  fill: var(--color-neutral-black);
+}
+
 @media only screen and (min-width: 1439px) {
   .cartBtn {
     margin-right: var(--space-md);
     order: 2;
+  }
+
+  .cartBtn:hover svg path {
+    fill: var(--color-neutral-black);
   }
 }

@@ -28,6 +28,11 @@
   }
 }
 
+.header button:nth-child(4):focus {
+  outline: 0.25rem solid var(--color-primary-orange);
+  border-radius: 50%;
+}
+
 /* menu button */
 .header button:nth-child(1) {
   z-index: 10;
