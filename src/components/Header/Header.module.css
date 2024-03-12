@@ -32,7 +32,6 @@
   z-index: 10;
 }
 
-.header button:nth-child(3),
 .header button:nth-child(1) {
   margin-right: var(--space-unit);
 }
@@ -52,12 +51,6 @@
   /* menu button */
   .header button:nth-child(1) {
     display: none;
-  }
-
-  /* cart button */
-  .header button:nth-child(3) {
-    margin-right: var(--space-md);
-    order: 2;
   }
 
   /* avatar button */
