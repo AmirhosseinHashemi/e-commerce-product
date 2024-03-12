@@ -1,0 +1,32 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: var(--space-sm) 0;
+}
+
+.item img {
+  width: 3.8rem;
+  height: 3.8rem;
+  border-radius: 0.5rem;
+}
+
+.item p {
+  font-size: var(--fs-md);
+  font-weight: var(--fw-regular);
+  color: var(--color-gray-2);
+}
+
+.info {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.info p:nth-child(2) {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.info strong {
+  color: var(--color-neutral-black);
+}

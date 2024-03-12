@@ -1,0 +1,48 @@
+.cartList {
+  position: absolute;
+  top: 110%;
+  left: 1rem;
+  right: 1rem;
+  z-index: 1;
+
+  padding: var(--space-sm);
+  background-color: var(--color-neutral-white);
+  border-radius: 0.8rem;
+  box-shadow: 0 1rem 2rem 0 rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  position: relative;
+  font-size: var(--fs-md);
+  font-weight: var(--fw-bold);
+  color: var(--color-neutral-black);
+
+  padding-bottom: var(--space-sm);
+}
+
+.title::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: -1.6rem;
+  right: -1.6rem;
+  height: 0.3rem;
+  background-color: var(--color-gray-4);
+}
+
+.message {
+  text-align: center;
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+  color: var(--color-gray-2);
+
+  padding: var(--space-xl);
+}
+
+@media only screen and (min-width: 1439px) {
+  .cartList {
+    top: 85%;
+    left: 70%;
+    right: 7rem;
+  }
+}

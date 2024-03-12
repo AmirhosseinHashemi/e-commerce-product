@@ -1,6 +1,21 @@
 .cartBtn {
+  position: relative;
   margin-left: auto;
   margin-right: var(--space-unit);
+}
+
+.cartBtn span {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+
+  font-size: 1rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-neutral-white);
+
+  background-color: var(--color-primary-orange);
+  padding: var(--space-xs) var(--space-unit);
+  border-radius: 50%;
 }
 
 @media only screen and (min-width: 1439px) {

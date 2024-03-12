@@ -1,11 +1,12 @@
 .header {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
   padding: var(--space-md);
 }
 
-.header button {
+.header > button {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -15,7 +16,7 @@
 }
 
 /* cart button */
-.header button:nth-child(3) {
+.header > button:nth-child(3) {
   margin-left: auto;
 }
 

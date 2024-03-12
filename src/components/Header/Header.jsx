@@ -6,18 +6,21 @@ import AvatarImg from "../../assets/images/image-avatar.png";
 import Navigation from "../Navigation/Navigation";
 import Overlay from "../Overlay/Overlay";
 import CartButton from "../CartButton/CartButton";
+import CartList from "../CartList/CartList";
 
-export default function Header() {
+export default function Header({ cart, setCart }) {
   const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isCartListOpen, setIsCartListOpen] = useState(false);
 
   return (
     <header className={styles.header}>
       <MenuButton isNavOpen={isNavOpen} setIsNavOpen={setIsNavOpen} />
       <Logo />
-      <CartButton />
+      <CartButton setIsCartListOpen={setIsCartListOpen} num={cart.num} />
       <AvatarButton />
       {isNavOpen && <Navigation />}
       {isNavOpen && <Overlay />}
+      {isCartListOpen && <CartList cart={cart} setCart={setCart} />}
     </header>
   );
 }
@@ -72,4 +75,9 @@ function AvatarButton() {
 MenuButton.propTypes = {
   isNavOpen: PropType.bool,
   setIsNavOpen: PropType.func,
+};
+
+Header.propTypes = {
+  cart: PropType.object,
+  setCart: PropType.func,
 };

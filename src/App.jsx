@@ -22,7 +22,7 @@ function App() {
   return (
     <>
       <Wrapper>
-        <Header></Header>
+        <Header cart={cart} setCart={setCart}></Header>
         <Main>
           <ProductCarousel />
           <Product product={product} setCart={setCart} />
