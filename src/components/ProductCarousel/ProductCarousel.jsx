@@ -14,6 +14,7 @@ import ThumbFour from "../../assets/images/image-product-4-thumbnail.jpg";
 function ProductCarousel() {
   const [activeImg, setActiveImg] = useState(0);
   const images = [ProductOne, ProductTwo, ProductThree, ProductFour];
+  const thumb = [ThumbOne, ThumbTwo, ThumbThree, ThumbFour];
   const maxSlide = images.length;
 
   function handleChangeActive(goTo) {
@@ -30,21 +31,11 @@ function ProductCarousel() {
       </figure>
 
       <div className={styles.thumbnails}>
-        <button>
-          <img src={ThumbOne} alt="thumbnail 1" />
-        </button>
-
-        <button>
-          <img src={ThumbTwo} alt="thumbnail 2" />
-        </button>
-
-        <button>
-          <img src={ThumbThree} alt="thumbnail 3" />
-        </button>
-
-        <button>
-          <img src={ThumbFour} alt="thumbnail 4" />
-        </button>
+        {thumb.map((imgSrc, i) => (
+          <button key={imgSrc} onClick={() => setActiveImg(i)}>
+            <img src={imgSrc} alt={`thumbnail${i}`} />
+          </button>
+        ))}
       </div>
 
       <button
