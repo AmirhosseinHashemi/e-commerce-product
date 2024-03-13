@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "./ProductCarousel.module.css";
+import PropType from "prop-types";
 
 import ProductOne from "../../assets/images/image-product-1.jpg";
 import ProductTwo from "../../assets/images/image-product-2.jpg";
@@ -11,7 +11,7 @@ import ThumbTwo from "../../assets/images/image-product-2-thumbnail.jpg";
 import ThumbThree from "../../assets/images/image-product-3-thumbnail.jpg";
 import ThumbFour from "../../assets/images/image-product-4-thumbnail.jpg";
 
-function ProductCarousel() {
+function ProductCarousel({ setModal }) {
   const [activeImg, setActiveImg] = useState(0);
   const images = [ProductOne, ProductTwo, ProductThree, ProductFour];
   const thumb = [ThumbOne, ThumbTwo, ThumbThree, ThumbFour];
@@ -26,7 +26,10 @@ function ProductCarousel() {
 
   return (
     <div className="carousel">
-      <figure className="carouselMainImg">
+      <figure
+        onClick={() => setModal((preVal) => !preVal)}
+        className="carouselMainImg"
+      >
         <img src={images[activeImg]} alt="shoe" />
       </figure>
 
@@ -74,5 +77,9 @@ function ProductCarousel() {
     </div>
   );
 }
+
+ProductCarousel.propTypes = {
+  setModal: PropType.func,
+};
 
 export default ProductCarousel;

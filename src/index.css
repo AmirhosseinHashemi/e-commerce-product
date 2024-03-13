@@ -135,6 +135,32 @@ button:focus-visible {
   z-index: 0;
 }
 
+.modal {
+  position: fixed;
+  inset: 0 0 0 0;
+  background-color: var(--color-neutral-lightBox);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+}
+
+.modalClose svg path {
+  fill: var(--color-neutral-white);
+}
+
+.modalClose:hover svg path {
+  fill: var(--color-primary-orange);
+}
+
 /* carousel classess */
 .carousel {
   position: relative;
@@ -235,5 +261,23 @@ button:focus-visible {
 
   .carouselThumb:hover img {
     opacity: 0.7;
+  }
+
+  /* carousel in modal */
+  .modal .carousel {
+    width: 50rem;
+  }
+
+  .modal .carouselBtn {
+    display: block;
+    top: 42%;
+  }
+
+  .modal .carouselBtn--left {
+    left: -3.3rem;
+  }
+
+  .modal .carouselBtn--right {
+    right: -3.3rem;
   }
 }
