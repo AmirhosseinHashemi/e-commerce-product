@@ -25,15 +25,15 @@ function ProductCarousel() {
   }
 
   return (
-    <div className={styles.carousel}>
-      <figure className={styles.carouselMainImg}>
+    <div className="carousel">
+      <figure className="carouselMainImg">
         <img src={images[activeImg]} alt="shoe" />
       </figure>
 
-      <div className={styles.carouselThumbnails}>
+      <div className="carouselThumbnails">
         {thumb.map((imgSrc, i) => (
           <button
-            className={styles.carouselThumb}
+            className="carouselThumb"
             key={imgSrc}
             onClick={() => setActiveImg(i)}
           >
@@ -44,7 +44,7 @@ function ProductCarousel() {
 
       <button
         onClick={() => handleChangeActive("pre")}
-        className={`${styles["btn"]} ${styles["btn--left"]}`}
+        className="carouselBtn carouselBtn--left"
       >
         <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg">
           <path
@@ -59,7 +59,7 @@ function ProductCarousel() {
 
       <button
         onClick={() => handleChangeActive("next")}
-        className={`${styles["btn"]} ${styles["btn--right"]}`}
+        className="carouselBtn carouselBtn--right"
       >
         <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg">
           <path

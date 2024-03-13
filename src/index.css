@@ -92,6 +92,7 @@ button:focus-visible {
   border-radius: 0.1rem;
 }
 
+/* -------------------------------------------------------------- Global classes */
 .wrapper {
   position: relative;
   max-width: 37.5rem;
@@ -134,6 +135,50 @@ button:focus-visible {
   z-index: 0;
 }
 
+/* carousel classess */
+.carousel {
+  position: relative;
+}
+
+.carouselMainImg {
+  height: 34rem;
+}
+
+.carouselMainImg img {
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.carouselBtn {
+  position: absolute;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--color-neutral-white);
+  padding: 1rem 1.2rem;
+  border-radius: 50%;
+}
+
+.carouselBtn:active svg {
+  transform: scale(0.75);
+}
+
+.carouselBtn--left {
+  left: 0;
+  transform: translate(50%, -50%);
+}
+
+.carouselBtn--right {
+  right: 0;
+  transform: translate(-50%, -50%);
+}
+
+.carouselThumbnails {
+  display: none;
+}
+
 /* -------------------------------------------------------------- Responsive */
 @media only screen and (min-width: 1439px) {
   .overlay {
@@ -147,5 +192,48 @@ button:focus-visible {
   .btn:hover {
     opacity: 0.8;
     box-shadow: none;
+  }
+
+  /* carousel classes */
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .carouselMainImg {
+    height: 50rem;
+  }
+
+  .carouselMainImg img {
+    cursor: pointer;
+    border-radius: 1.6rem;
+  }
+
+  .carouselBtn {
+    display: none;
+  }
+
+  .carouselThumbnails {
+    display: flex;
+    align-items: stretch;
+    gap: var(--space-md);
+  }
+
+  .carouselThumb img {
+    border-radius: 1.2rem;
+  }
+
+  .carouselThumb:focus {
+    outline: 0.3rem solid var(--color-primary-orange);
+    border-radius: 1.2rem;
+  }
+
+  .carouselThumb:focus img {
+    opacity: 0.5;
+  }
+
+  .carouselThumb:hover img {
+    opacity: 0.7;
   }
 }
